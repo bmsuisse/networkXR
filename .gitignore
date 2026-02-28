@@ -23,3 +23,4 @@ site/
 *.so
 *.dylib
 llm.txt
+.hypothesis/

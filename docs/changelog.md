@@ -5,6 +5,14 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+### Test
+
+- add hypothesis property-based test suite and fix edge-case bugs
+
+### 📦 Miscellaneous
+
+- bump version to 0.1.3
+
 ### Style
 
 - cargo fmt
