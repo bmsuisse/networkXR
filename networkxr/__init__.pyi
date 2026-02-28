@@ -33,6 +33,11 @@ from networkxr.generators.classic import (
     path_graph as path_graph,
     star_graph as star_graph,
 )
+from networkxr.generators.fake import (
+    fake_org_chart as fake_org_chart,
+    fake_social_network as fake_social_network,
+    fake_transaction_network as fake_transaction_network,
+)
 from networkxr.isomorphism import is_isomorphic as is_isomorphic
 from networkxr.multigraph import MultiDiGraph as MultiDiGraph, MultiGraph as MultiGraph
 from networkxr.relabel import (

@@ -23,6 +23,7 @@ ROOT = Path(__file__).parent.parent
 # Formatting helpers
 # ---------------------------------------------------------------------------
 
+
 def _format_signature(obj: Any) -> str:
     """Return a clean function/class signature string."""
     try:
@@ -89,6 +90,7 @@ def _format_symbol(name: str, obj: Any, *, level: int = 3) -> str:
 # ---------------------------------------------------------------------------
 # Main builder
 # ---------------------------------------------------------------------------
+
 
 def build_api_reference() -> str:
     """Build the full API reference Markdown document."""

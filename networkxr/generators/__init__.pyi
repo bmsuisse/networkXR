@@ -8,5 +8,10 @@ from networkxr.generators.classic import (
     path_graph as path_graph,
     star_graph as star_graph,
 )
+from networkxr.generators.fake import (
+    fake_org_chart as fake_org_chart,
+    fake_social_network as fake_social_network,
+    fake_transaction_network as fake_transaction_network,
+)
 
 __all__: list[str]

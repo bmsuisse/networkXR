@@ -35,7 +35,9 @@ def run_git_cliff() -> str:
         result = subprocess.run(cmd, capture_output=True, text=True, check=True, cwd=ROOT)
         return result.stdout
     except FileNotFoundError:
-        print("ERROR: git-cliff not found. Install it with: cargo install git-cliff", file=sys.stderr)
+        print(
+            "ERROR: git-cliff not found. Install it with: cargo install git-cliff", file=sys.stderr
+        )
         sys.exit(1)
     except subprocess.CalledProcessError as e:
         print(f"ERROR: git-cliff failed:\n{e.stderr}", file=sys.stderr)

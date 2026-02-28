@@ -48,6 +48,11 @@ from networkxr.generators.classic import (
     path_graph,
     star_graph,
 )
+from networkxr.generators.fake import (
+    fake_org_chart,
+    fake_social_network,
+    fake_transaction_network,
+)
 
 # Isomorphism
 from networkxr.isomorphism import is_isomorphic
@@ -65,7 +70,7 @@ from networkxr.drawing.layout import circular_layout, spring_layout
 # Utils
 from networkxr.utils.misc import edges_equal, flatten, graphs_equal, nodes_equal, pairwise
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "DiGraph",
@@ -94,6 +99,9 @@ __all__ = [
     "draw",
     "edges_equal",
     "empty_graph",
+    "fake_org_chart",
+    "fake_social_network",
+    "fake_transaction_network",
     "flatten",
     "from_dict_of_dicts",
     "from_dict_of_lists",
