@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+
+# Rust
+target/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Site build output
+site/
+
+# Misc
+*.so
+*.dylib
+llm.txt

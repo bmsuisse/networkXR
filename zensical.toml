@@ -1,0 +1,62 @@
+[project]
+site_name = "networkXR"
+site_description = "Rust-backed drop-in replacement for NetworkX"
+site_url = "https://bmsuisse.github.io/networkXR/"
+
+nav = [
+  { "Getting Started" = [
+    { "Introduction" = "index.md" },
+    { "Quick Start" = "getting-started.md" },
+  ]},
+  { "User Guide" = [
+    { "Architecture" = "architecture.md" },
+    { "API Reference" = "api-reference.md" },
+  ]},
+  { "API Details" = [
+    { "Graph" = "api/graph.md" },
+    { "DiGraph" = "api/digraph.md" },
+    { "MultiGraph" = "api/multigraph.md" },
+    { "Generators" = "api/generators.md" },
+    { "Converters" = "api/convert.md" },
+    { "Relabeling" = "api/relabel.md" },
+    { "Exceptions" = "api/exceptions.md" },
+    { "Utilities" = "api/utils.md" },
+  ]},
+  { "Reference" = [
+    { "Changelog" = "changelog.md" },
+  ]},
+]
+
+[project.repo]
+url = "https://github.com/bmsuisse/networkXR"
+
+[project.theme]
+favicon = "logo.svg"
+
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
+
+[project.theme.icon]
+logo = "lucide/network"
+[[project.theme.palette]]
+scheme = "default"
+primary = "deep-purple"
+accent = "amber"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "deep-purple"
+accent = "amber"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/bmsuisse/networkXR"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/python"
+link = "https://pypi.org/project/networkxr/"

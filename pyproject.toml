@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "networkxr"
+version = "0.1.0"
+description = "Drop-in replacement for NetworkX (Rust-accelerated)"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[project.optional-dependencies]
+plot = ["plotly>=5.0.0"]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-benchmark>=5", "ruff>=0.11", "pyright>=1.1", "networkx>=3.4", "zensical>=0.0.20", "maturin>=1.7", "plotly>=5.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["networkxr*", "networkx*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "basic"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
