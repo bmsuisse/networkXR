@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://bmsuisse.github.io/networkXR/architecture/">
+        <link rel="canonical" href="https://bmsuisse.github.io/networkXR/plotting/">
       
       
-        <link rel="prev" href="../getting-started/">
+        <link rel="prev" href="../architecture/">
       
       
-        <link rel="next" href="../plotting/">
+        <link rel="next" href="../api-reference/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Architecture - networkXR</title>
+        <title>Plotting Graphs - networkXR</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecture" class="md-skip">
+        <a href="#plotting-graphs" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture
+              Plotting Graphs
             
           </span>
         </div>
@@ -372,6 +372,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -391,7 +419,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture
+    Plotting Graphs
   
 
     
@@ -409,7 +437,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture
+    Plotting Graphs
   
 
     
@@ -436,10 +464,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#layer-diagram" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer Diagram
+        Quick Start
       
     </span>
   </a>
@@ -447,22 +475,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rust-core" class="md-nav__link">
+  <a href="#choosing-a-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rust Core
+        Choosing a Layout
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Rust Core">
+    <nav class="md-nav" aria-label="Choosing a Layout">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-structures" class="md-nav__link">
+  <a href="#spring-layout-default" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Structures
+        Spring Layout (default)
       
     </span>
   </a>
@@ -470,10 +498,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
+  <a href="#circular-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Files
+        Circular Layout
       
     </span>
   </a>
@@ -481,10 +509,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#key-design-decisions" class="md-nav__link">
+  <a href="#custom-positions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Design Decisions
+        Custom Positions
       
     </span>
   </a>
@@ -497,33 +525,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-layer" class="md-nav__link">
+  <a href="#customising-appearance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Python Layer
+        Customising Appearance
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Python Layer">
+    <nav class="md-nav" aria-label="Customising Appearance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#files_1" class="md-nav__link">
+  <a href="#per-node-colours" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Files
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multigraph-implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MultiGraph Implementation
+        Per-Node Colours
       
     </span>
   </a>
@@ -536,10 +553,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-system" class="md-nav__link">
+  <a href="#working-with-layouts-directly" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Build System
+        Working with Layouts Directly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-to-networkx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison to NetworkX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full API Reference
       
     </span>
   </a>
@@ -550,34 +589,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../plotting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Plotting Graphs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1088,10 +1099,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#layer-diagram" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer Diagram
+        Quick Start
       
     </span>
   </a>
@@ -1099,22 +1110,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rust-core" class="md-nav__link">
+  <a href="#choosing-a-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rust Core
+        Choosing a Layout
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Rust Core">
+    <nav class="md-nav" aria-label="Choosing a Layout">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-structures" class="md-nav__link">
+  <a href="#spring-layout-default" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Structures
+        Spring Layout (default)
       
     </span>
   </a>
@@ -1122,10 +1133,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
+  <a href="#circular-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Files
+        Circular Layout
       
     </span>
   </a>
@@ -1133,10 +1144,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#key-design-decisions" class="md-nav__link">
+  <a href="#custom-positions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Design Decisions
+        Custom Positions
       
     </span>
   </a>
@@ -1149,33 +1160,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-layer" class="md-nav__link">
+  <a href="#customising-appearance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Python Layer
+        Customising Appearance
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Python Layer">
+    <nav class="md-nav" aria-label="Customising Appearance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#files_1" class="md-nav__link">
+  <a href="#per-node-colours" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Files
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multigraph-implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MultiGraph Implementation
+        Per-Node Colours
       
     </span>
   </a>
@@ -1188,10 +1188,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-system" class="md-nav__link">
+  <a href="#working-with-layouts-directly" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Build System
+        Working with Layouts Directly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-to-networkx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison to NetworkX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full API Reference
       
     </span>
   </a>
@@ -1213,123 +1235,146 @@
                 
                   
 
-<h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h1>
-<p>networkXR is a <strong>hybrid Rust + Python</strong> library. Performance-critical graph data structures are implemented in Rust and exposed to Python via <a href="https://pyo3.rs">PyO3</a>, while higher-level functionality is implemented in pure Python.</p>
+<h1 id="plotting-graphs">Plotting Graphs<a class="headerlink" href="#plotting-graphs" title="Permanent link">&para;</a></h1>
+<p>networkXR provides a built-in <code>draw()</code> function powered by <strong>Plotly</strong> for interactive graph visualization — with hover tooltips, panning, and zoom out of the box.</p>
+<div class="admonition info">
+<p class="admonition-title">Optional Dependency</p>
+<p>Plotly is <strong>not</strong> required by networkXR itself. Install the optional plotting extra when you need it:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>networkxr<span class="o">[</span>plot<span class="o">]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># or</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>uv<span class="w"> </span>add<span class="w"> </span>networkxr<span class="o">[</span>plot<span class="o">]</span>
+</span></code></pre></div>
+</div>
 <hr />
-<h2 id="layer-diagram">Layer Diagram<a class="headerlink" href="#layer-diagram" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────┐
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                  Python API                      │
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  networkxr.Graph  ·  networkxr.DiGraph           │
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  networkxr.MultiGraph  ·  networkxr.MultiDiGraph │
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  generators  ·  convert  ·  relabel  ·  utils    │
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├─────────────────────────────────────────────────┤
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│               PyO3 Bindings                      │
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│         networkxr._networkxr module              │
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├─────────────────────────────────────────────────┤
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│                Rust Core                         │
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│     graph.rs  ·  digraph.rs  ·  views.rs         │
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│          IndexMap-based adjacency                │
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>└─────────────────────────────────────────────────┘
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">networkxr</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">barbell_graph</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This opens an interactive Plotly figure in your browser (or inline in Jupyter).</p>
+<hr />
+<h2 id="choosing-a-layout">Choosing a Layout<a class="headerlink" href="#choosing-a-layout" title="Permanent link">&para;</a></h2>
+<p>Two built-in layout algorithms are available — no extra dependencies required.</p>
+<h3 id="spring-layout-default">Spring Layout (default)<a class="headerlink" href="#spring-layout-default" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing">Fruchterman-Reingold</a>
+force-directed layout spreads nodes apart while pulling connected nodes closer.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">complete_graph</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="s2">&quot;spring&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="circular-layout">Circular Layout<a class="headerlink" href="#circular-layout" title="Permanent link">&para;</a></h3>
+<p>Places nodes evenly around a circle — ideal for ring or cycle graphs.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">cycle_graph</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="s2">&quot;circular&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="custom-positions">Custom Positions<a class="headerlink" href="#custom-positions" title="Permanent link">&para;</a></h3>
+<p>Pass your own positions as a <code>{node: (x, y)}</code> dictionary:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">3</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.87</span><span class="p">)}</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">)</span>
 </span></code></pre></div>
 <hr />
-<h2 id="rust-core">Rust Core<a class="headerlink" href="#rust-core" title="Permanent link">&para;</a></h2>
-<p>The Rust core lives in <code>src/</code> and provides the foundational graph data structures.</p>
-<h3 id="data-structures">Data Structures<a class="headerlink" href="#data-structures" title="Permanent link">&para;</a></h3>
-<p>Both <code>Graph</code> and <code>DiGraph</code> use <a href="https://docs.rs/indexmap/"><code>IndexMap</code></a> for:</p>
-<ul>
-<li><strong>Node storage</strong>: <code>IndexMap&lt;PyObject, Py&lt;PyDict&gt;&gt;</code> — maps node keys to attribute dicts</li>
-<li><strong>Adjacency</strong>: <code>IndexMap&lt;PyObject, IndexMap&lt;PyObject, Py&lt;PyDict&gt;&gt;&gt;</code> — maps node → neighbor → edge attributes</li>
-</ul>
-<p><code>IndexMap</code> preserves insertion order (like Python's <code>dict</code>) while providing O(1) average-case lookups.</p>
-<h3 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h3>
+<h2 id="customising-appearance">Customising Appearance<a class="headerlink" href="#customising-appearance" title="Permanent link">&para;</a></h2>
+<p><code>draw()</code> accepts many options to fine-tune the visual output:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">star_graph</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">G</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">node_color</span><span class="o">=</span><span class="s2">&quot;#10b981&quot;</span><span class="p">,</span>      <span class="c1"># Emerald green</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">node_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">edge_color</span><span class="o">=</span><span class="s2">&quot;#64748b&quot;</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">edge_width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">font_size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Star Graph K₆&quot;</span><span class="p">,</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>                <span class="c1"># Don&#39;t open browser, return Figure</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="p">)</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="c1"># Further customise with the Plotly API</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">paper_bgcolor</span><span class="o">=</span><span class="s2">&quot;#0f172a&quot;</span><span class="p">,</span> <span class="n">plot_bgcolor</span><span class="o">=</span><span class="s2">&quot;#1e293b&quot;</span><span class="p">)</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="per-node-colours">Per-Node Colours<a class="headerlink" href="#per-node-colours" title="Permanent link">&para;</a></h3>
+<p>Pass a list of CSS colour strings (one per node):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">path_graph</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#ef4444&quot;</span><span class="p">,</span> <span class="s2">&quot;#f97316&quot;</span><span class="p">,</span> <span class="s2">&quot;#eab308&quot;</span><span class="p">,</span> <span class="s2">&quot;#22c55e&quot;</span><span class="p">,</span> <span class="s2">&quot;#3b82f6&quot;</span><span class="p">]</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="working-with-layouts-directly">Working with Layouts Directly<a class="headerlink" href="#working-with-layouts-directly" title="Permanent link">&para;</a></h2>
+<p>The layout functions are also exposed at the top level for advanced use:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">networkxr</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">barbell_graph</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># pos = nx.circular_layout(G)</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1"># Use with draw</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1"># Or with any other plotting library</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objects</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">():</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="n">u</span><span class="p">]</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">y0</span><span class="p">,</span> <span class="n">y1</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;lines&quot;</span><span class="p">))</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<hr />
+<h2 id="comparison-to-networkx">Comparison to NetworkX<a class="headerlink" href="#comparison-to-networkx" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>File</th>
-<th>Description</th>
+<th>Feature</th>
+<th>NetworkX (<code>nx.draw</code>)</th>
+<th>networkXR (<code>nx.draw</code>)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>src/graph.rs</code></td>
-<td><code>Graph</code> — undirected simple graph (~716 lines)</td>
+<td>Backend</td>
+<td>Matplotlib (static)</td>
+<td><strong>Plotly (interactive)</strong></td>
 </tr>
 <tr>
-<td><code>src/digraph.rs</code></td>
-<td><code>DiGraph</code> — directed simple graph (~849 lines)</td>
+<td>Hover info</td>
+<td>❌</td>
+<td>✅ Node name + degree</td>
 </tr>
 <tr>
-<td><code>src/views.rs</code></td>
-<td><code>NodeView</code>, <code>EdgeView</code>, <code>DegreeView</code> — lazy view objects</td>
+<td>Zoom / Pan</td>
+<td>Limited</td>
+<td>✅ Built-in</td>
 </tr>
 <tr>
-<td><code>src/lib.rs</code></td>
-<td>PyO3 module registration</td>
+<td>Jupyter support</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HTML export</td>
+<td>❌</td>
+<td>✅ <code>fig.write_html()</code></td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td>matplotlib required</td>
+<td><code>networkxr[plot]</code> optional</td>
 </tr>
 </tbody>
 </table>
-<h3 id="key-design-decisions">Key Design Decisions<a class="headerlink" href="#key-design-decisions" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Hash-based equality</strong>: Node keys are compared using Python's <code>__hash__</code> and <code>__eq__</code> protocols via <code>py_hash_eq()</code> helper functions.</li>
-<li><strong>Symmetric adjacency</strong>: <code>Graph</code> maintains symmetric adjacency — adding edge <code>(u, v)</code> updates both <code>adj[u][v]</code> and <code>adj[v][u]</code> with the <strong>same</strong> <code>Py&lt;PyDict&gt;</code> reference.</li>
-<li><strong>Predecessor tracking</strong>: <code>DiGraph</code> maintains both <code>succ</code> (forward adjacency) and <code>pred</code> (reverse adjacency) maps for O(1) predecessor lookups.</li>
-</ul>
 <hr />
-<h2 id="python-layer">Python Layer<a class="headerlink" href="#python-layer" title="Permanent link">&para;</a></h2>
-<p>Pure Python modules extend the Rust core with higher-level functionality.</p>
-<h3 id="files_1">Files<a class="headerlink" href="#files_1" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>File</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>networkxr/multigraph.py</code></td>
-<td><code>MultiGraph</code>, <code>MultiDiGraph</code> — parallel edge support</td>
-</tr>
-<tr>
-<td><code>networkxr/convert.py</code></td>
-<td>Conversion functions (dict ↔ graph)</td>
-</tr>
-<tr>
-<td><code>networkxr/relabel.py</code></td>
-<td>Node relabeling and integer conversion</td>
-</tr>
-<tr>
-<td><code>networkxr/generators/classic.py</code></td>
-<td>Classic graph generators (path, cycle, complete, etc.)</td>
-</tr>
-<tr>
-<td><code>networkxr/exception.py</code></td>
-<td>Full NetworkX exception hierarchy</td>
-</tr>
-<tr>
-<td><code>networkxr/isomorphism.py</code></td>
-<td>Simple graph isomorphism check (VF2-lite)</td>
-</tr>
-<tr>
-<td><code>networkxr/utils/misc.py</code></td>
-<td>Utility functions (equality checks, pairwise, flatten)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="multigraph-implementation">MultiGraph Implementation<a class="headerlink" href="#multigraph-implementation" title="Permanent link">&para;</a></h3>
-<p><code>MultiGraph</code> and <code>MultiDiGraph</code> are implemented in pure Python (not Rust) because they require key-based edge indexing with auto-incrementing integer keys — a pattern that's naturally expressed in Python. They follow the same API patterns as <code>Graph</code> and <code>DiGraph</code>.</p>
-<hr />
-<h2 id="build-system">Build System<a class="headerlink" href="#build-system" title="Permanent link">&para;</a></h2>
-<p>networkXR uses <a href="https://www.maturin.rs/">maturin</a> as the build backend:</p>
-<div class="language-toml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[build-system]</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;maturin&gt;=1.9.4,&lt;2&quot;</span><span class="p">]</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;maturin&quot;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">[tool.maturin]</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;pyo3/extension-module&quot;</span><span class="p">]</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">module-name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;networkxr._networkxr&quot;</span>
-</span></code></pre></div>
-<p>The compiled Rust extension is installed as <code>networkxr._networkxr</code>, and the Python <code>Graph</code> and <code>DiGraph</code> classes are imported from this module in <code>networkxr/__init__.py</code>.</p>
+<h2 id="full-api-reference">Full API Reference<a class="headerlink" href="#full-api-reference" title="Permanent link">&para;</a></h2>
+<p>::: networkxr.drawing.nx_plotly.draw</p>
+<p>::: networkxr.drawing.layout.spring_layout</p>
+<p>::: networkxr.drawing.layout.circular_layout</p>
 
 
 

@@ -10,7 +10,13 @@
         <loc>https://bmsuisse.github.io/networkXR/architecture/</loc>
       </url>
       <url>
+        <loc>https://bmsuisse.github.io/networkXR/plotting/</loc>
+      </url>
+      <url>
         <loc>https://bmsuisse.github.io/networkXR/api-reference/</loc>
+      </url>
+      <url>
+        <loc>https://bmsuisse.github.io/networkXR/cookbook/plotting/</loc>
       </url>
       <url>
         <loc>https://bmsuisse.github.io/networkXR/api/graph/</loc>

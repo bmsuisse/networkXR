@@ -449,6 +449,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 ### 🚀 Features
 
 - networkxr with Rust SIMD, Rayon parallelism, FxHashMap — 10x-100x faster than NetworkX
+- Implement interactive graph plotting functionality using Plotly with new documentation and tests.
 
 
 
