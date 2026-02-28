@@ -16,10 +16,7 @@ def _make_faker(seed: int | None = None, locale: str = "en_US") -> Any:
     try:
         from faker import Faker
     except ImportError as exc:
-        msg = (
-            "faker is required for fake graph generators. "
-            "Install it with: pip install faker"
-        )
+        msg = "faker is required for fake graph generators. Install it with: pip install faker"
         raise ImportError(msg) from exc
 
     fake = Faker(locale)

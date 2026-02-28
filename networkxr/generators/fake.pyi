@@ -9,7 +9,6 @@ def fake_social_network(
     locale: str = "en_US",
     create_using: Any = None,
 ) -> Any: ...
-
 def fake_org_chart(
     depth: int = 3,
     breadth: int = 3,
@@ -17,7 +16,6 @@ def fake_org_chart(
     locale: str = "en_US",
     create_using: Any = None,
 ) -> Any: ...
-
 def fake_transaction_network(
     n_people: int = 15,
     n_transactions: int = 30,
