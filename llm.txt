@@ -450,6 +450,10 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+### Build
+
+- bump version to 0.1.6
+
 ### 📖 Documentation
 
 - enrich documentation, add examples, yolo release v0.1.5
